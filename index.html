@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/style.css">
+
+  <title>Frontend Mentor | Room homepage</title>
+
+
+</head>
+
+<body>
+  <header class="header">
+    <img src="./images/icon-hamburger.svg" alt="navbar open " class="navOpen" id="navOpen" onclick="openNav()">
+    <img src="./images/logo.svg" alt="company logo" class="header__logo">
+
+    <nav class="nav" id="nav">
+      <img src="./images/icon-close.svg" alt="navbar close" class="navClose" id="closeNav" onclick="closeNav()">
+      <ul class="nav__area" aria-expanded="true">
+        <li class="nav__items"><a href="#" class="nav__links">Home</a></li>
+        <li class="nav__items"><a href="#" class="nav__links">Shop</a></li>
+        <li class="nav__items"><a href="#" class="nav__links">About</a></li>
+        <li class="nav__items"><a href="#" class="nav__links">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="wrapper">
+
+    <section class="first">
+
+      <section class="image__slider">
+
+        <div class="images">
+          <picture>
+            <source media=(max-width:500px) srcset="images/mobile-image-hero-1.jpg" width="375px" height="340px">
+            <img src="./images/desktop-image-hero-1.jpg" alt="image 1" width="840px" height="534px">
+          </picture>
+
+
+          <picture>
+            <source media=(max-width:500px) srcset="images/mobile-image-hero-2.jpg" width="375px" height="340px">
+            <img src="./images/desktop-image-hero-2.jpg" alt="image 2" width="840px" height="534px">
+          </picture>
+
+
+          <picture>
+            <source media=(max-width:500px) srcset="images/mobile-image-hero-3.jpg" width="375px" height="340px">
+            <img src="./images/desktop-image-hero-3.jpg" alt="image 3" width="840px" height="534px">
+          </picture>
+
+        </div>
+
+        <div class="buttons">
+          <button class="btn" id="prevBtn" onclick="prevSlide()">
+            <img src="./images/icon-angle-left.svg" alt="click this  to get previous image">
+          </button>
+          <button class="btn" id="nextBtn" onclick="nextSlide()">
+            <img src="./images/icon-angle-right.svg" alt="click this  to get previous image">
+          </button>
+        </div>
+
+      </section>
+
+      <section class="shopNow">
+
+        <h1 class="shopNow__heading"> Discover innovative ways to decorate</h1>
+        <p class="shopNow__para"> We provide unmatched quality, comfort, and style for property owners across the
+          country.
+          Our experts combine form and function in bringing your vision to life. Create a room in your
+          own style with our collection and make your property a reflection of you and what you love.</p>
+        <span class="shopNow__link">Shop now <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#00000" fill-rule="nonzero" class="shopNow__link-icon"/></svg></span>
+
+      </section>
+
+    </section>
+
+    <section class="second">
+
+      <div class="about__dark__img">
+        <img src="./images/image-about-dark.jpg" alt="image about there dark theme furniture" width="420px"
+          height="256px">
+      </div>
+
+      <section class="about__furniture">
+        <h2 class="about__furniture__heading">about our future</h2>
+        <p class="about__furniture__para"> With stores all over the world, it's easy for you to find furniture for your
+          home or place of business.
+          Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+          store locator. Any questions? Don't hesitate to contact us today</p>
+      </section>
+
+      <div class="about__light__img">
+        <img src="./images/image-about-light.jpg" alt="image about there light theme furniture" width="420px"
+          height="256px">
+      </div>
+
+    </section>
+
+
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>

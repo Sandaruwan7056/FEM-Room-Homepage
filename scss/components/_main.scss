@@ -1,0 +1,149 @@
+.wrapper{
+    max-width: 100%;
+}
+
+.image__slider{
+    width: 100%;
+    position: relative;
+    height: fit-content;
+
+    @media (max-width:500px) {
+        height: 360px;
+        overflow: hidden;
+    }
+}
+
+.images img {
+    width: 100%;
+  height: auto;
+    object-fit: cover;
+    display: none; 
+}
+.images img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.buttons{
+    position: absolute;
+    z-index: 999;
+    bottom: 0%;
+    right: -21%;
+
+    @media (max-width:500px) {
+        right: 0%;
+    }
+}
+.btn{
+    background-color: var(--Black);
+    cursor: pointer;
+    padding: 2rem;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover{
+        background-color: var( --Dark-Gray);
+    }
+
+}
+.first{
+   display: flex;
+
+   @media (max-width:1200px) {
+    flex-wrap: wrap;
+    margin: auto;
+   }
+}
+.second{
+    display: flex;
+    @media (max-width:1200px) {
+        flex-wrap: wrap;
+        margin: auto;
+       }
+}
+
+.shopNow{
+    padding: 6rem;
+    max-width: 595px;
+
+    @media (max-width:500px) {
+        padding: 2rem;
+    }
+
+    &__heading{
+        color: var(--Very-Dark-Grey);
+        font-size: 2.5rem;
+        line-height: 3rem;
+        padding-bottom: 1.5rem;
+        font-weight: 700;
+
+        @media (max-width:500px) {
+            font-size: 2rem;
+        }
+    }
+
+    &__para{
+        color: var(--Dark-Gray);
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+
+    }
+
+    &__link{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        color: var(--Very-Dark-Grey);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &:hover{
+            color: var(--Dark-Gray);
+
+            >icon :hover{
+                fill: var(--Dark-Gray);
+            }
+        }
+    }
+}
+
+.about__dark__img img,
+.about__light__img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    display: block;
+   
+}
+
+.about__furniture{
+    padding: 4rem;
+    max-width: 580px;
+
+    @media (max-width:500px) {
+        padding: 2rem;
+    }
+
+    &__heading{
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        letter-spacing: 0.5rem;
+        padding-bottom: 1rem;
+
+        @media (max-width:500px) {
+            font-size: 1rem;
+        }
+    }
+    &__para{
+        color: var(--Dark-Gray);
+        font-weight: 500;
+    }
+}
+
+@keyframes fade {
+    from{opacity: 0.5;}
+    to{opacity: 1;}
+}
